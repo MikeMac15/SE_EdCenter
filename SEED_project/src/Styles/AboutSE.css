@@ -1,0 +1,31 @@
+.aboutSE {
+    /* margin-top: 50px;
+    margin-bottom: 150px;
+    margin-left: 8vw;
+    width: 40vw; */
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.aboutSE_text {
+    width: 40vw;
+    /* margin-right: 5vw; */
+}
+.aboutSE h4 {
+    font-size: 70px;
+    margin-bottom: 40px;
+    padding: 0;
+}
+.aboutSE p {
+    font-size: 20px;
+}
+.aboutSE img {
+    margin-top: 5vw;
+    height: 22vw;
+    width: 20vw;
+    
+}
