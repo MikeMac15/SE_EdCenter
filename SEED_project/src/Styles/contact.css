@@ -1,0 +1,111 @@
+
+/* .fullContact{
+    background: white;
+    padding-top: 70px;
+    width: 70vw;
+    
+}
+   */
+.contactBox{
+      border: solid #ccc 1px;
+      margin: 20px auto;
+    border-radius: 25px;
+      box-shadow: 1px 5px 30px 10px rgba(158, 76, 0, 0.404);
+
+      
+    }
+    .conBodyLeft {
+        flex-basis: 60%;
+        padding: 40px 60px;
+        background: #fff;
+        color: rgb(239, 183, 111);
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+
+    }
+    .conBoxBody{
+        display: flex;
+    }
+    
+    .divider {
+        width: 12px;
+        background-color: #cccccc;
+
+    }
+    
+    .conBodyRight{
+        
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    flex-basis: 40%;
+    padding: 40px 40px;
+    background: rgb(239, 183, 111);
+    color: #fff;
+
+}
+
+.contactBox p{
+   
+    color: rgb(239, 183, 111);
+}
+.contactBox h1{
+    color: #c67307;
+    margin-bottom: 0;
+}
+.conBoxHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#btn{
+   background: #ff9000ad;
+    width: 100px;
+    border: none;
+    outline: none;
+    color:white;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(158, 76, 0, 0.804);
+}
+
+tr td:first-child{
+    padding-right: 20px;
+}
+tr td{
+    padding-top: 20px;
+}
+
+
+
+
+
+.inputRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.inputRow .inputGroup{
+    flex-basis: 40%;
+}
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 5px;
+}
+textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    outline:none;
+    padding:10px;
+    box-sizing: border-box;
+}
+label{
+    margin-bottom: 6px;
+    display: block;
+   
+}

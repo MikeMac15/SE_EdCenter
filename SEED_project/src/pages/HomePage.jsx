@@ -7,11 +7,12 @@ import HomeScene from '../threeHomeScene'
 import "../Styles/HomeBase.css"
 import TheTeam from "./AboutSEED/theTeam";
 import About from "./AboutSEED/about";
+import  Contact_us  from './AboutSEED/contact'
 import "../Styles/Nav.css";
 // import Navbar from './Navbar'
 export const HomePage = () => {
-    const team = useRef(null);
     const about = useRef(null);
+    const contact = useRef(null);
     const styles = {textDecoration: 'none', color: "#b9a892"};
 
 
@@ -39,7 +40,7 @@ export const HomePage = () => {
                 <Link to={'/'} style={styles}>Home</Link>
                 <Link onClick={() => scrollToSection(about)} style={styles}>About</Link>
                 <Link to={'funzone'} style={styles}>FunZone</Link>
-                <Link onClick={() => scrollToSection(team)} style={styles}>Contact</Link>
+                <Link onClick={() => scrollToSection(contact)} style={styles}>Contact</Link>
 
             </nav>
         </div>
@@ -51,15 +52,21 @@ export const HomePage = () => {
                 <HomeScene />
             </Canvas>
 
+        <div className="home">
+
             <h1>Homepage</h1>
 
             <div ref={about}>
                 <About />
             </div>
-            <div ref={team}>
-                <TheTeam />
+            
+            <TheTeam />
+
+            <div ref={contact}>
+                <Contact_us />
             </div>
         
+        </div>
         </>
     );
 }
