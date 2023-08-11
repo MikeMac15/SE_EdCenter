@@ -1,0 +1,43 @@
+
+img {
+    height: 100px;
+    width: 180px;
+}
+.navbar {
+    box-sizing: border-box;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar h2 {
+    font-size: 32px;
+    color: #b9a892;
+    font-weight: 500;
+}
+.navLinks a {
+    position: relative;
+    font-size: 18px;
+    color: rgb(185,168,146);
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navLinks  ::before {
+    content: '';
+    position: absolute;
+    display: flex;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #c06622a6;
+    transition: .3s;
+}
+.navLinks  :hover::before {
+    width: 100%;
+}
