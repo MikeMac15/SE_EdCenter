@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import './funZoneStyles/mathPage.css'
 
+
 export const MathPage = () => {
+    
+
+
+
+    /////////////////////////////////////////////////MathLogic Addition///////////////////////////////////////////////////
     const [answer, setAnswer] = useState('');
     const [text, setText] = useState('');
     const [outcome, setOutcome] = useState('dns')
@@ -46,6 +52,7 @@ export const MathPage = () => {
                 <button onClick={generateNewNumbers}>New Numbers</button>
             </div>
         </div>
+        
         </>
     )
 }

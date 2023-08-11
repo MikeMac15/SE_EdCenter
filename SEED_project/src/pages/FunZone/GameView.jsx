@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 
 
 export const GameView = () => {
 
     return (
         <>
-        <h5>Math Page</h5>
+        <Link to={'mathpage'}>Math Page</Link>
         <h5>Science Page</h5>
         </>
     )
