@@ -1,21 +1,24 @@
 import { Float, Text, OrbitControls, MeshReflectorMaterial} from "@react-three/drei";
-
+import { Model } from "./pages/FunZone/model";
 
 
 export default function HomeScene () {
 
 return(
     <>
-        <OrbitControls />
+    
+        <color args={['#faebd7']} attach='background' />
+
+        <OrbitControls enableZoom={false} />
 
         <directionalLight position={[1,2,3]} intensity={1.5} />
         <ambientLight intensity={0.5} />
 
-
-        <mesh>
+        <Model scale={0.5} />
+        {/* <mesh>
             <sphereGeometry />
             <meshBasicMaterial color='red' />
-        </mesh>
+        </mesh> */}
 
         <mesh position={[2,0,-1]}>
             <boxGeometry />

@@ -18,8 +18,8 @@ export const FZNavbar = () => {
 
             <nav className="FZnavLinks">
                 <Link to={'/'} style={styles} >Ed Center HomePage</Link>
-                <Link to={'/funzone'} style={styles} >GameView</Link>
-                <Link to={'login'} style={styles}>LogIn</Link>
+                <Link to={'gameView'} style={styles} >GameView</Link>
+                <Link to={'/funzone'} style={styles}>LogIn</Link>
                 <Link to={'signup'} style={styles}>SignUp</Link>
 
             </nav>
