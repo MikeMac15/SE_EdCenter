@@ -17,7 +17,7 @@ h4 {
 }
 .image {
     opacity: 0;
-    transform: translateX(-50vw);
+    transform: translateX(-10vw);
     transition: all 1s ease-in-out;
 }
 .image img {
@@ -38,7 +38,7 @@ h4 {
     background: #efb76f;
     color: #fff;
     opacity: 0;
-    transform: translateX(50vw);
+    transform: translateX(10vw);
     transition: all 1s ease-in-out;
 }
 .push-right{

@@ -33,11 +33,11 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <GameView />
+                element: <Log_in />
             },
             {
-                path: 'login',
-                element: <Log_in />
+                path: 'gameView',
+                element: <GameView />
             },
             {
                 path: 'signup',
