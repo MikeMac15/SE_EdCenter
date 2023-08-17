@@ -1,11 +1,43 @@
-.win {
-    width: 90vw;
-    height: 90vh;
-    background-color: aqua;
+
+.background {
+    background-image: url('/pictures/oldgreenChalkboard.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+}
+.mathGame {
+    font-family: 'Nanum Pen Script', cursive;
+    padding-top: 11vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.answerCount, .equation {
+    font-size: 10vw;
+    color: whitesmoke;
+    text-align: center;
 }
 
-.loss {
-    width: 90vw;
-    height: 90vh;
-    background-color: salmon;
+.inputMath {
+    background-color:rgb(0, 0, 0,0.3);
+    width: 50%;
+    border: 1px solid white;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+.button {
+    
+    
+    margin-top: 40px;
+    background-color: rgb(0, 0, 0,0);
+    color: whitesmoke;
+    border: solid 1px white;
+    border-radius: 15px;
+}
+.button:hover {
+    box-shadow: 0px 5px 15px 0px rgb(255, 255, 255); 
 }

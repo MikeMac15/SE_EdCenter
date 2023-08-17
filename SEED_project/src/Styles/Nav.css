@@ -3,19 +3,19 @@ img {
     height: 100px;
     width: 180px;
 }
-.navbar {
-    box-sizing: border-box;
+.navbarMain {
+    /* box-sizing: border-box;
     position: static;
     top: 0;
     left: 0;
     width: 100%;
-    padding-left: 1vw;
+    padding-left: 1vw; */
     padding-right: 1vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.navbar h2 {
+.navbarMain h2 {
     font-size: 32px;
     color: #b9a892;
     font-weight: 500;

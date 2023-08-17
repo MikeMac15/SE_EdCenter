@@ -2,8 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 70px;
-   border: solid 1px black;
+    margin-bottom: 10vw;
+    margin-top: 10vw;
+ 
    
 }
 .overview_title h2 {
@@ -14,7 +15,7 @@
 .overview_title{
     -webkit-text-stroke: 1px #000;
     color: transparent;
-    background-image: linear-gradient(#000,#000);
+    background-image: linear-gradient(#f9daa4,#cda547);
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: -85vw 0;
