@@ -18,11 +18,6 @@ export const router = createBrowserRouter([
                 index: true,
                 element: <HomePage />
             },
-            {
-                path: 'about',
-                element: <About />
-            },
-            
         ]
 
 
@@ -49,8 +44,8 @@ export const router = createBrowserRouter([
 
             },
             {
-                path: 'sciencePage',
-                element: <SpacePage />
+                path: 'spacePage',
+                element: <GameView /> // fix these
             }
         ]
     }
