@@ -24,16 +24,20 @@ const TeamMember = ({name, role, imgSrc, fullName, content}) => {
 
     return (
         <>
-        <div className={`team-member`}>
-            <div className={`image ${name} ${isVisible ? 'push-left' : 'hidden'}`}>
-                <img src={imgSrc} alt={fullName} />
-            </div>
-            <div className={`about ${name} ${isVisible ? 'push-right' : 'hidden'}`}>
-                <div className="titles">
-                    <h2>{fullName}</h2>
-                    <h4>{role}</h4>
+        <div className={`team-member ${name}`}>
+            <div className="about">
+
+                <div className={`image ${name} ${isVisible ? 'push-left' : 'hidden'}`}>
+                    <img src={imgSrc} alt={fullName} />
                 </div>
-                <p>{content}</p>
+                <div className={`text ${name} ${isVisible ? 'push-right' : 'hidden'}`}>
+                    <div className="titles">
+                        <h2>{fullName}</h2>
+                        <h4>{role}</h4>
+                    </div>
+                    <p>{content}</p>
+                </div>
+                
             </div>
         </div>
         </>

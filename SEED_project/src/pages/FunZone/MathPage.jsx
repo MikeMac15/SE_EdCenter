@@ -58,7 +58,7 @@ export const MathPage = () => {
         // setNewNumBtn(true);
         setTimeout(() => {
             generateNewNumbers();
-        }, 1250);
+        }, 500);
     };
     
     const wrongAnswer = () => {

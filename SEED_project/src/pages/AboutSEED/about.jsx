@@ -1,5 +1,7 @@
+import { Card } from 'react-bootstrap'
 import '../../Styles/AboutSE.css'
 import '../../Styles/whatWeGot.css'
+import Cards from './Cards'
 
 export const About = () => {
 
@@ -22,6 +24,10 @@ export const About = () => {
 
 
 
+            </div>
+            <div className="cardsAbout">
+            
+                <Cards />
 
             </div>
         </>

@@ -8,6 +8,8 @@ import TheTeam from "./AboutSEED/theTeam";
 import About from "./AboutSEED/about";
 import  Contact_us  from './AboutSEED/contact'
 import '../Styles/Nav.css'
+import Cards from './AboutSEED/Cards'
+
 
 
 export const HomePage = () => {
@@ -41,20 +43,25 @@ export const HomePage = () => {
         <div id="mainCanvas" style={{ width: '100vw', height: '55vh' }}>
 
             <Canvas  >
-                <HomeScene /> 
+               <HomeScene />  {/* if smbtn clicked show spacepage */}
+              
             </Canvas>
         </div>
                                 {/* Homepage */}
-        <div className="home">
              <h1>Homepage</h1> {/* takeOut for prod.. */}
             <div ref={about}>
                 <About />
             </div>
-            <TheTeam />
+            <div className="theTeam">
+
+                <TheTeam />
+            </div>
+        <div className="home">
             <div ref={contact}>
                 <Contact_us />
             </div>
         </div>
+        {/* <Cards /> */}
         </>
     );
 }
