@@ -3,6 +3,7 @@
     margin-bottom: 150px;
     margin-left: 8vw;
     width: 40vw; */
+    background-image: linear-gradient(#f9daa4, #fff);
 
     display: flex;
     flex-direction: row-reverse;

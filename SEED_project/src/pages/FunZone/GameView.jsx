@@ -4,6 +4,8 @@ import { Canvas } from "@react-three/fiber";
 import HomeZone from "./HomeZone";
 import { FZNavbar } from "./FZNavbar"
 import './funZoneStyles/styleHomeZone.css';
+import  SpacePage  from "./SpacePage";
+import './funZoneStyles/NasaAPOD.css'
 
 export const GameView = () => {
 
@@ -12,13 +14,15 @@ export const GameView = () => {
             <FZNavbar />
                                     {/* R3F */}
             <div style={{width: '100vw', height: '100vh', position: "fixed"}} >
-                <Canvas>
-                    <HomeZone/>
+                <Canvas
+                camera={{fov:75, position:[0,0,3]}}>
+                    {/* <HomeZone/> */}
+                    <SpacePage />
                 </Canvas>            
             </div>
                                     {/* R3F */}
-            <Link to={'../mathpage'}>Math Page</Link>
-            <h5>Science Page</h5>
+            {/* <Link to={'../mathpage'}>Math Page</Link>
+            <h5>Science Page</h5> */}
         </>
     )
 }

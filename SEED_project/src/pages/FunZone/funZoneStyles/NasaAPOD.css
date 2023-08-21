@@ -1,0 +1,51 @@
+.spacescr {
+    display: flex;
+
+    /* text */
+
+}
+.ApodTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ApodTitle div{
+    color: white;
+    font-size: 50px;
+    background-color: rgba(128, 128, 128, 0.285);
+    border-radius: 20px;
+    padding: 15px;
+}
+.ApodTitle input {
+    width: 10vw;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.285);
+    border-radius: 20px;
+}
+
+.SpaceScreen  img{
+    width: 1024px;
+    height: 670px;
+    border: none;
+    border-radius: 20px;
+    background: #000000;
+}
+
+.SpaceDescription p {
+    color: whitesmoke;
+    width: 30vw;
+    background-color: rgba(128, 128, 128, 0.285);
+    border-radius: 20px;
+    padding: 15px;
+
+}
+
+.SpaceDescription h3 {
+    color: whitesmoke;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.285);
+    border-radius: 20px;
+    padding: 15px;
+    width: 30vw
+}
+
