@@ -1,12 +1,80 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import './funZoneStyles/mathPage.css'
-
+import { userContext } from "../FunZone";
+import { api } from "../utils";
 
 
 
 
 export const MathPage = () => {
+    const {user} = useContext(userContext);
+    const [scores, setScores] = useState([])
+   
+    ////////////////////////////////////// { Backend top5 call } ////////////////////////////////////
+    //
+    // 'api/math/'
+    //           'allscores/'  get/post
+    //           'top5scores/' get
+    // http://127.0.0.1:8000/api/math/top5scores
+
+    const getTop5 = async() => {
+        try{
+            const token = localStorage.getItem('token');
+            if(!token){
+                console.error('no token found');
+                return;
+            }
+            api.defaults.headers.common["Authorization"] = `Token ${token}`
+
+            let response = await api.get('math/allscores/')
+            setScores(response.data.scores)
+        } catch (error) {
+            console.error('Error fetching scores', error)
+        }
+    }
+
+    useEffect(()=> {
+        
+            getTop5()
+            
+            console.log('user',user)
+            console.log('scores',scores)
+
+            
+
        
+    },[user])
+
+
+    ////////////////////////////////////// { post score function } ////////////////////////////////////
+    const postMathScore = async (e) => {
+        e.preventDefault();
+        
+        try{
+            const token = localStorage.getItem('token');
+            if (!token){
+                console.error("no token found")
+                return;
+            }
+            api.defaults.headers.common["Authorization"] = `Token ${token}`
+            api.defaults.headers.common["Content-Type"] = 'application/json'
+
+            const response = await api.post("math/allscores/", {
+                'score_value': count,
+                'timestamp': new Date().toISOString
+            })
+
+            console.log('score added:', response.data);
+        } catch (error){
+            console.error('error adding score', error)
+        }
+    }
+
+
+
+    ////////////////////////////////////// { MathGame logic } ////////////////////////////////////
+    //
+    //
     // const [newNumBtn, setNewNumBtn] = useState(false)
     const [text, setText] = useState('');
     const [multiplier, setMultiplier] = useState(10)
@@ -18,9 +86,7 @@ export const MathPage = () => {
     const [count, setCount] = useState(0);
 
 
-  useEffect(() => {
-    console.log('multiplier =', multiplier);
-  },[multiplier])
+  
 
     const addTwo = (x,y) => x + y;
 
@@ -58,7 +124,7 @@ export const MathPage = () => {
         // setNewNumBtn(true);
         setTimeout(() => {
             generateNewNumbers();
-        }, 500);
+        }, 600);
     };
     
     const wrongAnswer = () => {
@@ -84,7 +150,16 @@ export const MathPage = () => {
         <div className="background">
 
             <div className="mathGame">
-                
+                <div className="top5">
+                    {scores.length !== 0 
+                            ? scores.map((score, index)=>(
+                                <div key= {index}>
+                                    Score: {score.score_value}, Time: {score.timestamp}
+                                </div>
+                            ))
+                            : 'non' 
+                }
+                </div>
                     <div className="answerCount">
                         Correct answers: {count}
                     </div>
@@ -108,7 +183,7 @@ export const MathPage = () => {
                     {showBtn && <button className="button" onClick={mathGame() ? correctAnswer  : wrongAnswer}>Check Answer</button>}
                    {/* {newNumBtn && <button className="button" onClick={generateNewNumbers}>New Numbers</button>} */}
                    {replayBtn && <button className="button" onClick={resetGame} >Play Again?</button> }
-                
+                     <button onClick={postMathScore}>post score</button>
             </div>
             
         </div>
