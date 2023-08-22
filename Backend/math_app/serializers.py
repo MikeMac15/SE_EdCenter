@@ -4,4 +4,4 @@ from .models import MathPage
 class ScoreSerializer(serializers.ModelSerializer):
     class Meta: 
         model = MathPage
-        fields = '__all__'
+        fields = ['score_value', 'timestamp']

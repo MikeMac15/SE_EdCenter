@@ -25,7 +25,7 @@ return(
          distanceFactor={1.17} 
          position={[0,0.06,0.2]}
          rotation-x={-1.05}
-         ><iframe src='http://localhost:5173/funzone/mathpage'/> </Html>
+         ><iframe src='http://localhost:5173/funzone/mathPage'/> </Html>
     </primitive>
 
                           {/* Display L */}
@@ -36,7 +36,7 @@ return(
          position={[0,0.06,0.2]}
          rotation-x={-1.05}
          >
-            <iframe src='http://localhost:5173/funzone/mathPage/'/> 
+            <iframe src='http://localhost:5173/funzone/spacePage/'/> 
         </Html>
     </primitive>
                             {/* Ground */}

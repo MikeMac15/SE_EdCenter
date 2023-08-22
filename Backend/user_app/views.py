@@ -18,7 +18,7 @@ class Sign_up(APIView):
     def post(self, request):
         request.data["username"] = request.data["email"]
         newCustomUser = CustomUser.objects.create_user(**request.data)
-        token = Token.Objects.create(user= newCustomUser)
+        token = Token.objects.create(user= newCustomUser)
         return Response(
             {"CustomUser": newCustomUser.email, "token" : token.key},
             status=HTTP_201_CREATED
@@ -26,12 +26,13 @@ class Sign_up(APIView):
     
 class Log_in(APIView):
     def post(self, request):
+        print(request.data)
         email = request.data.get("email")
         password = request.data.get("password")
         currentUser = authenticate(username=email, password=password)
         if currentUser:
             token, created = Token.objects.get_or_create(user=currentUser)
-            return Response({"token": token.key, "ListUser": currentUser.email})
+            return Response({"token": token.key, "User": currentUser.email})
         else: 
             return Response("No matching credentials", status=HTTP_404_NOT_FOUND)
         

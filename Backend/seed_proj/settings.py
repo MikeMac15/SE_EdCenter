@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-j=k3$x8w)ne%gjeo5i&ke+lvi2w8neh^9ry4g9&anbk5!z9!$n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','127.0.0.1']
 
-
+# CORS_ALLOW_ALL_ORIGINS = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,13 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'user_app',
+    'math_app',
+    #'space_app',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
 
-    'user_app',
-    'math_app',
-    #'space_app',
 ]
 
 MIDDLEWARE = [
@@ -96,13 +96,15 @@ REST_FRAMEWORK = {
     ],
 }
 
+
+
 CORS_ALLOWED_ORIGINS = [
     # "https://example.com", #domain
     # "https://sub.example.com", subdomain
     "http://localhost:5173", #development server
+    # "http://localhost:5173/funzone",
 ]
 
-AUTH_USER_MODEL =  'user_app.CustomUser'
 
 
 # Password validation
@@ -145,3 +147,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL =  'user_app.CustomUser'
