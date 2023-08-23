@@ -32,18 +32,20 @@ export const Sign_up = () => {
 
 
     return (
-        <form onSubmit={(e) => signUp(e)}>
-            <h5>Sign Up</h5>
-            <input 
-            type='email'
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)} />
-            <input 
-            type='password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)} />
-            <input type= 'submit' />
-        </form>
+        <div className="loginBackground">
+            <form onSubmit={(e) => signUp(e)}>
+                <h5>Sign Up</h5>
+                <input 
+                type='email'
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)} />
+                <input 
+                type='password'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)} />
+                <input type= 'submit' />
+            </form>
+        </div>
     )
 };
 

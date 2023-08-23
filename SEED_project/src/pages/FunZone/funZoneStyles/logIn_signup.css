@@ -1,0 +1,27 @@
+form h5 {
+    color: black;
+    text-shadow: 1px 1px 2px gray;
+
+}
+.loginBackground {
+    height: 94%;
+    width: 100%;
+    background-image: url('/pictures/login-background.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1512px 1000px;
+}
+.loginBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBackground form {
+    background-color: rgba(0, 0, 0, 0.454);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 20px;
+}

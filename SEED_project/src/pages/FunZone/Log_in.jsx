@@ -3,6 +3,7 @@ import { useState, useContext } from "react";
 import { userContext } from "../FunZone";
 import { api } from "../utils";
 import './funZoneStyles/styleHomeZone.css'
+import './funZoneStyles/logIn_signup.css'
 import GameView from "./GameView";
 export const Log_in = () => {
     const [userName, setUserName] = useState('');
@@ -33,25 +34,25 @@ export const Log_in = () => {
 
 
     return (
-        <>
-        {!user ?
-            <form onSubmit={(e) => logIn(e)}>
-                <h5>Log In</h5>
-                <input
-                    type="email"
-                    value={userName}
-                    onChange={(e) => setUserName(e.target.value)}
-                />
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <input type="submit" />
-            </form>
-            : <GameView/>
+        <div className="loginBackground">
+            {!user ?
+                <form onSubmit={(e) => logIn(e)}>
+                    <h5>Log In</h5>
+                    <input
+                        type="email"
+                        value={userName}
+                        onChange={(e) => setUserName(e.target.value)}
+                    />
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <input type="submit" />
+                </form>
+                : <GameView/>
 
-}
+            }
 
 
 
@@ -68,7 +69,7 @@ export const Log_in = () => {
          */}
             
        
-        </>
+        </div>
        
     )
 };
