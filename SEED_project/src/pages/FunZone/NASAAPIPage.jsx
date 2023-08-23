@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Float, Environment, PresentationControls, Html, Stars, useGLTF} from "@react-three/drei";
 // import NasaApi from "./NasaApi";
 
@@ -6,7 +6,7 @@ export const NASAAPIPage = () => {
     const [APOD,setAPOD] = useState(null);
     const [Dzoom, setDzoom] = useState(false)
     const [imgZoom, setImgZoom] = useState(false)
-    const [dateIn, setDateIn] = useState(null)
+    const [dateIn, setDateIn] = useState('2023-08-02')
     const [prevDate, setPrevDate] = useState(null)
     
 
@@ -24,13 +24,18 @@ export const NASAAPIPage = () => {
         } catch (err) {
             console.error("Error fetching data", err);
         }
-    
-    
 }
-    const handleDateChange = (e) => {
-        setDateIn(e.target.value);
+
+    useEffect(()=> {
         getFetch(dateIn)
-    }
+        console.log(dateIn)
+    },[dateIn])
+
+
+    // const handleDateChange = (e) => {
+    //     setDateIn(e.target.value);
+    //     getFetch(dateIn)
+    // }
 
 
 
@@ -76,7 +81,7 @@ export const NASAAPIPage = () => {
                                 {APOD.title}
                                 </div>
                                 }
-                                <input type="date" onChange={handleDateChange}  />
+                                <input type="date"  onChange={(e)=> setDateIn(e.target.value)}/>
                             </div>
                         </Html>
                             {/* IMAGE */}
