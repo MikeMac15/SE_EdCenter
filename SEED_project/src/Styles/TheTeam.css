@@ -3,9 +3,15 @@
     margin:auto;
     width: 88vw;
 } */
+.theTeam {
+    width: 99%;
+    padding-bottom: 4rem;
+    background: #efb76f;
+}
 .titles {
     display: flex;
     justify-content: space-evenly;
+    text-shadow: 1px 1px 2px #fff ;
 }
 h2{
     font-size: 40px;
@@ -15,11 +21,11 @@ h4 {
     margin-top: auto;
     margin-bottom: auto + 1%;
     background: #fdd9ab57;
-    border-radius: 500px;
+    border-radius: 20px;
     padding: 4px;
 }
 .about {
-    background: #7a7a7a1c;
+    background: #b380333e;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -42,15 +48,17 @@ h4 {
 .team{
     display: flex;
     flex-direction: row;
-  
+    /* justify-content: space-around; */
+    /* align-content: space-around; */
 }
 .team-member {
     
     /* flex-basis: 40%; */
-    padding: 40px 40px;
+    padding: 40px 50px;
 
-    background: #efb76f;
+    /* background: #efb76f; */
     color: #fff;
+    
     /* opacity: 1;
     transform: translateX(0vw);
     transition: all 1s ease-in-out;
@@ -67,3 +75,16 @@ h4 {
     opacity: 1;
     transform: translateX(0);
 } */
+
+.meetTheOwners {
+    /* margin-top: 2rem; */
+    /* margin-top: 4rem; */
+    padding-bottom: 1rem;
+    padding-top: 3rem;
+    background: #efb76f;
+    text-shadow: 1px 1px 2px #fff ;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+    color: #fff;
+}

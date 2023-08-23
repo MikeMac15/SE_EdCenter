@@ -24,6 +24,7 @@ const TeamMember = ({name, role, imgSrc, fullName, content}) => {
 
     return (
         <>
+        
         <div className={`team-member ${name}`}>
             <div className="about">
 
@@ -73,7 +74,7 @@ export const TheTeam = () => {
                 She also received a Master’s degree through Eastern for Curriculum and Instruction. 
                 After that, she got her Administration credentials through WGU. She has worked for the Inchelium school since 1992, substituting for four years and working as a para educator for one year. 
                 She was then hired on full time in 1997. She has taught 4th, middle, and high school.
-                For the last six years, she has been the Title I Director, Special Education Coordinator, testing coordinator, and librarian, among other hats.
+                For the last six years, she has been the Title I Director, Special Education Coordinator, testing coordinator, and librarian.
                         `}
                 />
             </div>

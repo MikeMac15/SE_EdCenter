@@ -9,7 +9,7 @@ import About from "./AboutSEED/about";
 import  Contact_us  from './AboutSEED/contact'
 import '../Styles/Nav.css'
 import Cards from './AboutSEED/Cards'
-
+import { Trusted } from './AboutSEED/trusted'
 
 
 export const HomePage = () => {
@@ -48,9 +48,18 @@ export const HomePage = () => {
             </Canvas>
         </div>
                                 {/* Homepage */}
-             <h1>Homepage</h1> {/* takeOut for prod.. */}
+             <Trusted /> {/* takeOut for prod.. */}
+
+             <div className="moeInfo">
+                <h3>Helping Children Soar To New Heights!</h3>
+            </div>
+
+
             <div ref={about}>
                 <About />
+            </div>
+            <div className="meetTheOwners">
+                <h2>Meet the Owners.</h2>
             </div>
             <div className="theTeam">
 
