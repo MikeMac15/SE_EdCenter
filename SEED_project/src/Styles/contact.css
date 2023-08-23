@@ -1,18 +1,17 @@
 
-/* .fullContact{
-    background: white;
-    padding-top: 70px;
-    width: 70vw;
+.fullContact{
+    
+    
+    margin-top: 15vh;
+    margin-bottom: 15vh;
     
 }
-   */
+  
 .contactBox{
       border: solid #ccc 1px;
-      margin-top: 15vh;
-      margin-bottom: 15vh;
     border-radius: 25px;
       box-shadow: 1px 5px 30px 10px rgba(158, 76, 0, 0.404);
-
+      /* background: green; */
       
     }
     .conBodyLeft {

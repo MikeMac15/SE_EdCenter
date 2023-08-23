@@ -32,7 +32,7 @@ export const Contact_us = () => {
 
     return (
         <>
-        {/* <div className="fullContact"> */}
+        <div className="fullContact">
             <div className="contactBox">
                 {/* <div className="conBoxHeader">
                     <h1>Connect with us!</h1>
@@ -118,7 +118,7 @@ export const Contact_us = () => {
 
             </div>
 
-        {/* </div> */}
+        </div>
 
         </>
 

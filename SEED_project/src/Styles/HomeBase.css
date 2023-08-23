@@ -3,9 +3,11 @@
     flex-direction: column;
     align-items: center;
     
+    /* opacity: 0.5; */
+    /* 1512 715 */
 }
 
 
 h1 {
-    background-color: antiquewhite;
+    background-color: red;
 }

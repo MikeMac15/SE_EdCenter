@@ -1,13 +1,15 @@
 .aboutSE {
-    /* margin-top: 50px;
-    margin-bottom: 150px;
+    /* 
+    
     margin-left: 8vw;
     width: 40vw; */
     background-image: linear-gradient(#f9daa4, #fff);
-
+    /* margin-top: 50px; */
+    padding-top: 3rem;
+    margin-bottom: 150px;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
@@ -26,7 +28,61 @@
 }
 .aboutSE img {
     margin-top: 5vw;
-    height: 22vw;
-    width: 20vw;
+    height: 15vw;
+    width: 30vw;
+    border-radius: 10px;
+    box-shadow: 1px 5px 30px 10px rgba(177, 109, 6, 0.438);
+}
+
+.moeInfo {
+    height: 40rem;
+    background-image: url('/pictures/school-supplies.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+    display: flex;
+    align-items: center;
+
+}
+.moeInfo h3{
+    color:#fff;
+    font-size: 5rem;
+    width: 50rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px #bcbcbc ;
+}
+
+.afterCards {
+    height: 40rem;
+    background-image: url('/pictures/deposit-back-to-school.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+    display: flex;
+    align-items: center;
+}
+.afterCards .acGroup {
+    color: white;
+    width: 50%;
+    margin-left: 50%;
+
     
+
+    /* background: #6969695d;
+    border-radius: 25px; */
+    padding: 4rem;
+
+}
+.acGroup h6 {
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: left;
+}
+.acGroup h5 {
+    width: 95%;
+    padding-top: 2rem;
+    font-size: 2.5rem;
+    text-align: right;
 }
