@@ -17,10 +17,13 @@
     padding: 15px;
 }
 .ApodTitle input {
-    width: 10vw;
+    width: 18rem;
+    font-size: 2rem;
     color: white;
     background-color: rgba(128, 128, 128, 0.285);
+    border: none;
     border-radius: 20px;
+
 }
 
 .SpaceScreen  img{
@@ -40,6 +43,7 @@
 
 }
 
+
 .SpaceDescription h3 {
     color: whitesmoke;
     text-align: center;
@@ -49,3 +53,38 @@
     width: 30vw
 }
 
+.SpaceFavorites h3 {
+    color: whitesmoke;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.285);
+    border-radius: 20px;
+    padding: 15px;
+    width: 20rem;
+}
+
+.SpaceFavorites ul {
+    color: whitesmoke;
+    width: 20rem;
+    background-color: rgba(128, 128, 128, 0.285);
+    border-radius: 20px;
+    padding-left: 20%;
+}
+.SpaceFavorites li button {
+    background: rgba(255, 41, 41, 0.235);
+    border: none;
+    border-radius: 20px;
+    margin-left: 2rem;
+}
+.SpaceFavorites li {
+    margin-left: 1rem;
+    padding: 5px;
+    margin-top: 10px;
+}
+.SpaceFavorites .saveBtn {
+    background-color: rgba(128, 128, 128, 0.285);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    
+}

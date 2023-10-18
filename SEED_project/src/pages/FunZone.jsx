@@ -45,6 +45,18 @@ export const FunZone = () => {
     return (
         <>
             <div className="FZNavbar">
+                <div className="FZnavTitle">
+
+                    <span>F</span>
+                    <span>u</span>
+                    <span>n </span>
+                    <span>Z</span>
+                    <span>o</span>
+                    <span>n</span>
+                    <span>e</span>
+                
+                </div>
+
                 <img src="/pictures/SoaringEagleLogo.png" alt="Logo"/>
 
                 <nav className="FZnavLinks">
@@ -64,7 +76,7 @@ export const FunZone = () => {
                 </nav>
 
             </div>
-            {user ?<h2>welcome {user.username}</h2> : <div></div>}
+            {/* {user ?<h2>welcome {user.username}</h2> : <div></div>} */}
             <userContext.Provider value={{user, setUser}}>
                 <Outlet />
             </userContext.Provider>

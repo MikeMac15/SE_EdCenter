@@ -5,7 +5,10 @@
     background-size: cover;
     width: 100%;
     height: 100%;
-
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .mathGame {
     font-family: 'Nanum Pen Script', cursive;
@@ -16,7 +19,7 @@
     align-items: center;
 }
 .answerCount, .equation {
-    font-size: 10vw;
+    font-size: 3rem;
     color: whitesmoke;
     text-align: center;
 }
@@ -40,4 +43,25 @@
 }
 .button:hover {
     box-shadow: 0px 5px 15px 0px rgb(255, 255, 255); 
+}
+
+.MathChalkBoard iframe{
+    width: 300px;
+    height: 180px;
+    border: none;
+    
+}
+
+.top5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    height: 40vh;
+    padding: 30px;
+}
+.top5 li {
+    font-size: 20px;
 }

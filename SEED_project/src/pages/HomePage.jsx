@@ -1,8 +1,6 @@
-import { Canvas } from '@react-three/fiber'
 import { useRef} from 'react'
 import { Link } from 'react-router-dom'
 //////////////////////////////////////////////
-import HomeScene from '../threeHomeScene'
 import "../Styles/HomeBase.css"
 import TheTeam from "./AboutSEED/theTeam";
 import About from "./AboutSEED/about";
@@ -10,6 +8,12 @@ import  Contact_us  from './AboutSEED/contact'
 import '../Styles/Nav.css'
 import Cards from './AboutSEED/Cards'
 import { Trusted } from './AboutSEED/trusted'
+
+import IntroFZ from './IntroToFZ/IntroFZ'
+
+
+// import backgroundVideo from '/video/seedv2.mp4'
+import VideoComponent from './AboutSEED/mainVideo';
 
 
 export const HomePage = () => {
@@ -38,39 +42,24 @@ export const HomePage = () => {
                 <Link onClick={() => scrollToSection(contact)} style={styles}>Contact</Link>
             </nav>
         </div>
+            
+            <VideoComponent/>
 
-                                  {/* R3F */}
-        <div id="mainCanvas" style={{ width: '100vw', height: '55vh' }}>
-
-            <Canvas  >
-               <HomeScene />  {/* if smbtn clicked show spacepage */}
-              
-            </Canvas>
-        </div>
-                                {/* Homepage */}
              <Trusted /> {/* takeOut for prod.. */}
-
-             <div className="moeInfo">
-                <h3>Helping Children Soar To New Heights!</h3>
-            </div>
-
 
             <div ref={about}>
                 <About />
             </div>
-            <div className="meetTheOwners">
-                <h2>Meet the Owners.</h2>
-            </div>
-            <div className="theTeam">
-
-                <TheTeam />
-            </div>
+      
         <div className="home">
             <div ref={contact}>
                 <Contact_us />
             </div>
         </div>
-        {/* <Cards /> */}
+     
+
+        
+        <IntroFZ/>
         </>
     );
 }

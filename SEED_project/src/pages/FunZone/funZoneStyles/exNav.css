@@ -4,7 +4,24 @@
     background-color: olive;
 } */
 
-img {
+.FZnavTitle {
+    margin-left: 4rem;
+    font-family: 'Rubik Pixels', sans-serif;
+    
+}
+.FZNavbar span{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+.FZNavbar span:nth-of-type(even){
+    color:rgb(255, 173, 66);
+}
+.FZNavbar span:nth-of-type(odd){
+    color: rgb(251, 113, 78);
+}
+
+.FZNavbar img {
+    margin-left: 3%;
     height: 50px;
     width: 90px;
 }
@@ -19,6 +36,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: rgb(0, 0, 0);
 }
 
 .FZnavLinks a {
@@ -27,6 +45,7 @@ img {
     color: rgb(217, 134, 130);
     font-weight: 500;
     margin-left: 15px;
+    margin-right: 15px;
 }
 .FZnavLinks  ::before {
     content: '';

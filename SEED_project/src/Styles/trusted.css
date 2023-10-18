@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: baseline;
 
-    /* background-color: red; */
+    background-color: white;
 }
 
 .trustedP img {
@@ -20,3 +20,9 @@
     display: flex;
     justify-items: space-evenly;
 }
+
+@media (max-width: 768px) {
+    .trustedP {
+        display: none;
+    }
+  }

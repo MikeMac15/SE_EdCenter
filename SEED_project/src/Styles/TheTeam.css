@@ -1,22 +1,50 @@
 
-/* .team{
-    margin:auto;
-    width: 88vw;
-} */
-.theTeam {
-    width: 99%;
-    padding-bottom: 4rem;
-    background: #efb76f;
+
+.team{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    background-image: url('/pictures/paper.jpeg');
+    padding-bottom: 3rem;
+
+    box-shadow: 10px 0 20px -4px rgba(162, 162, 162, 0.97), -10px 0 20px -4px rgba(162, 162, 162, 0.97);
+
+    @media (max-width: 768px) {
+        
+        width: 100%;
+     
+    }
 }
-.titles {
+
+.theTeam {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('/pictures/H_introFZ/IFZmain.jpeg');
+    
+    @media (max-width: 768px) {
+        
+          background: none;
+       
+      }
+
+}
+.text{
+    width: 10%;
+}
+/* name      co-owner */
+.titles {                   
     display: flex;
     justify-content: space-evenly;
-    text-shadow: 1px 1px 2px #fff ;
+    text-shadow: 1px 1px 2px #cfcfcf ;
 }
-h2{
+.titles h2{
     font-size: 40px;
 }
-h4 {
+.titles h4 {
     font-size: 15px;
     margin-top: auto;
     margin-bottom: auto + 1%;
@@ -24,67 +52,91 @@ h4 {
     border-radius: 20px;
     padding: 4px;
 }
-.about {
-    background: #b380333e;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 40px;
+.aboutPara{
+    text-indent: 1rem;
+    margin-top: 1rem;
+    width: 100%;
 }
-/* .image {
-    opacity: 0;
-    transform: translateX(-10vw);
-    transition: all 1s ease-in-out;
-} */
-.image img {
-    height: 20vw;
-    width: 20vw;
-    border-radius: 50%;
-    margin-bottom: 40px;
-    box-shadow: 1px 5px 30px 10px rgba(158, 76, 0, 0.553);
+.aboutPara p {
+    margin: 0;
+    padding: 0;
 }
-.team{
+.about_brenda{
     display: flex;
     flex-direction: row;
-    /* justify-content: space-around; */
-    /* align-content: space-around; */
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ff9a029b; */
 }
-.team-member {
+.about_brenda .text{
+    /* border-top-right-radius: 2rem; */
+    flex-basis: 50%;
+    padding: 6rem 2rem;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 2px #a3a3a3be ;
+}
+.about_brenda .image{
+    flex-basis: 50%;
+    text-align: center;
+}
+/* .about_brenda .image img{
+    box-shadow: 1px 5px 30px 10px #d38900;
+} */
+.about_shelley{
+    /* background-color: #67ed019b; */
     
-    /* flex-basis: 40%; */
-    padding: 40px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.about_shelley .text{
+    /* border-bottom-left-radius: 2rem; */
+    flex-basis: 50%;
+    padding: 6rem 2rem;
+    /* height: 100%; */
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 2px #a3a3a3be ;
+}
+.about_shelley .image{
+    flex-basis: 50%;
+    text-align: center; 
+}
+/* .about_shelley .image img{
+    box-shadow: 1px 5px 30px 10px rgb(84, 158, 0);
+} */
 
-    /* background: #efb76f; */
-    color: #fff;
+.image img {
+    height: 50%;
+    width: 50%;
+    /* border-radius: 50%; */
+    /* margin-bottom: 40px;  */
     
-    /* opacity: 1;
-    transform: translateX(0vw);
-    transition: all 1s ease-in-out;
-    */
 }
+
 .team-member p {
     padding: 10px 40px;
 }
-/* .push-right{
-    opacity: 1;
-    transform: translateX(0);
-}
-.push-left{
-    opacity: 1;
-    transform: translateX(0);
-} */
 
 .meetTheOwners {
-    /* margin-top: 2rem; */
-    /* margin-top: 4rem; */
+    background-image: url('/pictures/paper.jpeg');
+    width: 100%;
     padding-bottom: 1rem;
     padding-top: 3rem;
-    background: #efb76f;
+
     text-shadow: 1px 1px 2px #fff ;
-    /* display: flex;
-    justify-content: center; */
+    
     text-align: center;
-    color: #fff;
+    color: #000000;
+}
+
+.meetTheOwners h2 {
+    font-size: 3rem;
+}
+
+.lineBreak {
+    width: 0.25rem;
+    border-radius: 2rem;
+    height: 30rem;
+    background: black;
 }

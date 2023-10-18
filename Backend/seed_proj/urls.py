@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/user/', include("user_app.urls")),
     path('api/math/', include("math_app.urls")),
-    #spacepage
+    path('api/spacepage/', include("spaceapi_app.urls")),
 ]

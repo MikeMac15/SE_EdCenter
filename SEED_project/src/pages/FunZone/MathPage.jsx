@@ -9,8 +9,11 @@ import { api } from "../utils";
 export const MathPage = () => {
     const {user} = useContext(userContext);
     const [scores, setScores] = useState([])
-   
+    
+    const top5scores = scores.sort((a,b)=> b.score_value-a.score_value).slice(0,5);
+
     ////////////////////////////////////// { Backend top5 call } ////////////////////////////////////
+    const [z, setZ] = useState('');
     //
     // 'api/math/'
     //           'allscores/'  get/post
@@ -43,7 +46,7 @@ export const MathPage = () => {
             
 
        
-    },[user])
+    },[])
 
 
     ////////////////////////////////////// { post score function } ////////////////////////////////////
@@ -64,9 +67,9 @@ export const MathPage = () => {
                 'timestamp': new Date().toISOString
             })
 
-            console.log('score added:', response.data);
+            setZ('score added');
         } catch (error){
-            console.error('error adding score', error)
+            setZ('error adding score')
         }
     }
 
@@ -80,7 +83,6 @@ export const MathPage = () => {
     const [multiplier, setMultiplier] = useState(10)
     const [x, setX] = useState(Math.floor(Math.random() * multiplier));
     const [y, setY] = useState(Math.floor(Math.random() * multiplier));
-    const [z, setZ] = useState('');
     const [showBtn, setShowBtn] = useState(true);
     const [replayBtn, setReplayBtn] = useState(false)
     const [count, setCount] = useState(0);
@@ -148,18 +150,23 @@ export const MathPage = () => {
         
         <>
         <div className="background">
+                <div className="top5">
+                    <h2>Top 5 Scores Leaderboard</h2>
+                    <ol>
+                        {scores.length !== 0
+                                ? top5scores.map((score, index)=>(
+                                        <li key= {index}>
+                                            User: {score.username} / Score: {score.score_value} / Time: {score.timestamp}
+
+                                        </li>
+                                    
+                                ))
+                                : <li>no scores</li> 
+                        }
+                    </ol>
+                </div>
 
             <div className="mathGame">
-                <div className="top5">
-                    {scores.length !== 0 
-                            ? scores.map((score, index)=>(
-                                <div key= {index}>
-                                    Score: {score.score_value}, Time: {score.timestamp}
-                                </div>
-                            ))
-                            : 'non' 
-                }
-                </div>
                     <div className="answerCount">
                         Correct answers: {count}
                     </div>

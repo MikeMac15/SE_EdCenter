@@ -38,10 +38,12 @@ export const Sign_up = () => {
                 <input 
                 type='email'
                 value={userName}
+                placeholder="Email"
                 onChange={(e) => setUserName(e.target.value)} />
                 <input 
                 type='password'
                 value={password}
+                placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)} />
                 <input type= 'submit' />
             </form>

@@ -7,6 +7,7 @@ import GameView from "./pages/FunZone/GameView";
 import Log_in from "./pages/FunZone/Log_in";
 import Sign_up from "./pages/FunZone/Sign_up";
 import SpacePage from "./pages/FunZone/SpacePage";
+import MathPage2 from "./pages/FunZone/MathPage2";
 
 export const router = createBrowserRouter([
     {
@@ -44,8 +45,12 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'spacePage',
-                element: <SpacePage/> // fix these
+                element: <SpacePage/> // 
             }
         ]
-    }
+    },
+    {
+        path:'/mathPage',
+        element: <MathPage2 />, // take out//// example page only
+    },
 ]);

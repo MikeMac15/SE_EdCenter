@@ -6,10 +6,10 @@ form h5 {
 .loginBackground {
     height: 94%;
     width: 100%;
-    background-image: url('/pictures/login-background.jpeg');
+    background-image: url('/pictures/new-login.jpeg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 1512px 1000px;
+    background-size: 100% 100%;
 }
 .loginBackground {
     display: flex;
@@ -19,7 +19,7 @@ form h5 {
 
 .loginBackground form {
     background-color: rgba(0, 0, 0, 0.454);
-    padding: 3rem;
+    padding: 4rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;

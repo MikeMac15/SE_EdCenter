@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     'user_app',
     'math_app',
-    #'space_app',
+    'spaceapi_app',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',

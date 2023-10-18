@@ -7,12 +7,11 @@ const CardContainer = styled.div`
 
         position: relative;
         perspective: 200rem;
-        height: 380px;
+        height: 360px;
         
-        margin-top: 10px;
+        margin-top: 20px;
+        margin-bottom: 50px;
         margin-left: 40px;
-        
-        
 
         &:hover .card-front{
             transform: rotateY(180deg)
@@ -25,7 +24,7 @@ const CardContainer = styled.div`
         
 const CardFront = styled.div`
         border-radius: 20px;
-        background: white;         
+        background: whitesmoke;         
 
 
         transform: rotateY(0deg);
@@ -35,12 +34,14 @@ const CardFront = styled.div`
         transition: 0.9s;
         backface-visibility: hidden;
 
+        box-shadow: 10px 0px 20px 1px rgba(100, 75, 50, .5);
+
         font-size: 1.4rem;
         `;
 
 const CardBack = styled.div`
         border-radius: 20px;
-        background: white;
+        background: whitesmoke;
 
         display: flex;
         justify-content: center;
@@ -53,7 +54,7 @@ const CardBack = styled.div`
         transition: 0.9s;
         backface-visibility: hidden;   
 
-        box-shadow: 10px 0px 20px 2px rgba(0, 0, 20, .5);
+        box-shadow: 10px 0px 20px 1px rgba(100, 75, 50, .5);
         
         font-size: 1.2rem;
         `;
@@ -71,6 +72,10 @@ const CardText = styled.p`
         padding: 10px;
         width: 95%;
         
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         `;
 
 

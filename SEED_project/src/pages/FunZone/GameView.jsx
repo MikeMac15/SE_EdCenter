@@ -6,6 +6,8 @@ import HomeZone from "./HomeZone";
 import './funZoneStyles/styleHomeZone.css';
 import  NASAAPIPage  from "./NASAAPIPage";
 import './funZoneStyles/NasaAPOD.css'
+import { SchoolRoom } from "./SchoolRoom";
+import HomeZoneNew from './HomeZoneNew'
 
 export const GameView = () => {
 
@@ -15,9 +17,11 @@ export const GameView = () => {
                                     {/* R3F */}
             <div style={{width: '100vw', height: '100vh', position: "fixed"}} >
                 <Canvas
-                camera={{fov:75, position:[0,0,3]}}>
-                    <HomeZone/>
+                camera={{fov:75, position:[0.2,1,1]}}>
+                    {/* <HomeZone/> */}
+                    <HomeZoneNew />
                     {/* <SpacePage /> */}
+                    <SchoolRoom  />
                 </Canvas>            
             </div>
                                     {/* R3F */}

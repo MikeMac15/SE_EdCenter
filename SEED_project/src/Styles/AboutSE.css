@@ -17,6 +17,7 @@
 .aboutSE_text {
     width: 40vw;
     /* margin-right: 5vw; */
+    text-indent: 1rem;
 }
 .aboutSE h4 {
     font-size: 70px;
@@ -35,14 +36,31 @@
 }
 
 .moeInfo {
-    height: 40rem;
-    background-image: url('/pictures/school-supplies.jpeg');
+    /* height: 40rem; */
+    /* background-image: url('/pictures/school-supplies.jpeg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: 100% 100%; */
 
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
+    /* position: ; */
+    /* z-index: 1; */
+
+
+
+    
+        position: absolute;
+        top: 60%; /* Adjust the vertical position as needed */
+        left: 30%; /* Adjust the horizontal position as needed */
+        transform: translate(-50%, -50%); /* Center the text horizontally and vertically */
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+        padding: 20px; /* Add padding to the text for better appearance */
+        color: white; /* Text color */
+        text-align: center; /* Center the text within the box */
+        z-index: 1; /* Ensure the text is displayed above the video */
+
+        border-radius: 6rem;
 
 }
 .moeInfo h3{
@@ -59,6 +77,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
+
+   
 
     display: flex;
     align-items: center;
